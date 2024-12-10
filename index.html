@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    @keyframes jiggle-animation {
+      0% {
+        transform: rotate(0);
+      }
+      25% {
+        transform: rotate(-10deg);
+      }
+      75% {
+        transform: rotate(10deg);
+      }
+      100% {
+        transform: rotate(0);
+      }
+    }
+
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about__greeting {
+      display: inline-block;
+      animation: jiggle-animation 2s infinite ease-in-out;
+    }
+
+    .about__name {
+      font-weight: bold;
+    }
+    
+    .about__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .about__desc {
+      text-align: center;
+    }
+
+    .profile-picture {
+      margin-top: 25px;
+      width: 275px;
+      height: 275px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    
+    .profile-picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    .responsive-image {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    
+    .about__underscore {
+    display: inline-block;
+    animation: blink-animation 1s infinite;
+    }
+
+    @keyframes blink-animation {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+
+    .contact__grid {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .contact__item {
+      flex: 1;
+      text-align: center;
+    }
+
+  </style>
+  <title>Abhinav Barman's Portfolio</title>
+</head>
+
+<body class="dark" id="top">
+  
+  <header class="header center">
+    
+    <h3>
+      <a href="https://imabhi7.github.io/Abhinav-Barman-Portfolio/" class="link">AB.</a>
+    </h3>
+    
+    <nav class="nav center">
+      <ul class="nav__list center">
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#projects">Projects</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#skills">Skills</a>
+        </li>
+        <li class="nav__list-item">
+          <a class="link link--nav" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>    
+    <div class="about center">
+      <h1>Hi<span class="about__greeting">👋</span>, <span class="about__name" id="typed-text"></span><span class="about__underscore">_</span></h1>
+      <div class="profile-picture">
+        <img src="img/AB.jpg" alt="Abhinav Barman" class="responsive-image">
+      </div>
+      <div class="about__text">
+        <h2 class="about__role">[Final Year Student, EE Department]</h2>
+        <div class="about__desc">
+          <p>I’m a final-year Electrical Engineering student at IIT Ropar, passionate about using data to drive decisions, enhance product strategies, and solve business problems. I have experience in data analysis, process automation, and building dashboards to extract insights and improve efficiency. I’m eager to connect and explore opportunities where I can apply my skills and make a meaningful impact.</p>
+        </div>
+      </div>
+      <div class="about__contact center">
+        <a href="https://drive.google.com/file/d/1G-VYMFqje7Ta-AiOCyr3JqMzecFTxPQ9/view">
+          <span class="btn btn--outline">Resume</span>
+        </a>
+      </div>
+    </div>
+    
+    <script>
+      const textToType = "I'm Abhinav Barman";
+      const delay = 100;
+    
+      function typeWriter(text, i = 0) {
+        if (i < text.length) {
+          document.getElementById("typed-text").textContent += text.charAt(i);
+          setTimeout(() => typeWriter(text, i + 1), delay);
+        } else {
+          startBlinkingUnderscore();
+        }
+      }
+    
+      function startBlinkingUnderscore() {
+        const underscore = document.querySelector('.about__underscore');
+        underscore.style.animation = "blink-animation 1s infinite";
+      }
+    
+      typeWriter(textToType);
+    </script>
+
+    <section id="projects" class="section projects">
+      <h2 class="section__title">Projects</h2>
+      <div class="projects__grid">
+        
+        <div class="project">
+          <a href="https://github.com/imabhi7/Dijkstras-Algorithm-Mumbai" aria-label="source code" class="link link--icon"><h3>Mumbai-Local-Journey-Planner</h3></a>
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <p class="project__description"> Developed a project using Dijkstra’s algorithm to determine the minimum number of railway stations needed for a journey
+            in Mumbai. Developed a website that takes inputs for the current and destination station numbers and efficiently calculates the optimal
+            route, considering the shortest path with the least number of stations.</p>
+          <ul class="project__stack">
+            <li class="project__stack-item">C++</li>
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <a href="https://github.com/imabhi7/Astro-Carti-Co" aria-label="source code" class="link link--icon"><h3>Astro-Carti-Co</h3></a>
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <p class="project__description"> Developed an e-commerce apparel website that incorporates seamless navigation, an intuitive user interface, a secure shopping
+            cart system, and a responsive design, ensuring a smooth online shopping experience.</p>
+          <ul class="project__stack">
+            <li class="project__stack-item">HTML</li>
+            <li class="project__stack-item">CSS</li>
+            <li class="project__stack-item">JavaScript</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <a href="https://github.com/imabhi7/LRU-Cache-Implementation" aria-label="source code" class="link link--icon"><h3>LRU-Cache-Implementation</h3></a>
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <p class="project__description">Developed a project implementing an LRU Cache using a doubly linked list and an unordered map. The cache efficiently stores key-value pairs, discarding the least recently used items when capacity is reached. It provides efficient insertion, retrieval, and removal operations for improved performance.</p>
+          <ul class="project__stack">
+            <li class="project__stack-item">C++</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <a href="https://github.com/imabhi7/Image-Enhancement" aria-label="source code" class="link link--icon"><h3>Image-Enhancement</h3></a>
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <p class="project__description">Developed a Python project using OpenCV, NumPy, and Matplotlib to enhance blurred images, applying advanced
+            image processing techniques for improved clarity, sharpness, brightness, and contrast.</p>
+          <ul class="project__stack">
+            <li class="project__stack-item">Python</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <a href="https://github.com/imabhi7/LoRa-Communication-Shield" aria-label="source code" class="link link--icon"><h3>LoRa-Communication-Shield</h3></a>
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <p class="project__description">Designed and implemented a LoRa Communication Shield for mobile phones using Arduino and C++. The project
+            utilizes a LoRa module to establish wireless communication between two devices without the need for traditional data
+            channels. The shield enhances mobile phone capabilities by enabling long-range, low-power communication for various
+            applications.</p>
+          <ul class="project__stack">
+            <li class="project__stack-item">C++</li>
+          </ul>
+        </div>
+
+        <div class="project">
+          <a href="https://www.youtube.com/watch?v=bWIJd9ts0ew" aria-label="source code" class="link link--icon"><h3>LPG-Gas-Detector</h3></a>
+            <i aria-hidden="true" class="fab fa-github"></i>
+          </a>
+          <p class="project__description">Designed and developed a user-friendly LPG gas detector using Arduino and C programming. Implemented advanced
+            sensing techniques for accurate gas leakage detection, ensuring prompt notifications via SMS. It enhances safety measures
+            for households and establishments with a reliable and cost-effective solution.</p>
+          <ul class="project__stack">
+            <li class="project__stack-item">C</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section skills" id="skills">
+      <h2 class="section__title">Skills</h2>
+      <ul class="skills__list">
+        <li class="skills__list-item btn btn--plain">Web Development</li>
+        <li class="skills__list-item btn btn--plain">Software Development</li>
+        <li class="skills__list-item btn btn--plain">Data Structures</li>
+        <li class="skills__list-item btn btn--plain">Machine Learning</li>
+        <li class="skills__list-item btn btn--plain">C</li>
+        <li class="skills__list-item btn btn--plain">C++</li>
+        <li class="skills__list-item btn btn--plain">Python</li>
+        <li class="skills__list-item btn btn--plain">HTML</li>
+        <li class="skills__list-item btn btn--plain">CSS</li>
+        <li class="skills__list-item btn btn--plain">JavaScript</li>
+        <li class="skills__list-item btn btn--plain">Power BI</li>
+        <li class="skills__list-item btn btn--plain">MATLAB</li>
+        <li class="skills__list-item btn btn--plain">Tinker-cad</li>
+        <li class="skills__list-item btn btn--plain">Arduino</li>
+        <li class="skills__list-item btn btn--plain">Circuit-Verse</li>
+      </ul>
+    </section>
+
+    <section class="section contact center" id="contact">
+      <h2 class="section__title">Contact</h2>
+      <div class="contact__grid">
+        <a href="mailto:abhinavbarman2002@gmail.com" class="contact__item">
+          <span class="btn btn--outline">Email</span>
+        </a>
+        <a href="https://www.linkedin.com/in/abhinav-barman/" class="contact__item">
+          <span class="btn btn--outline">LinkedIn</span>
+        </a>
+        <a href="https://github.com/imabhi7" class="contact__item">
+          <span class="btn btn--outline">GitHub</span>
+        </a>
+      </div>
+    </section>
+
+  </br>
+  </br>
+  </br>
+  </br>
+  </main>
+</body>
+</html>
