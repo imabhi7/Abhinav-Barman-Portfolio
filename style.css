@@ -11,9 +11,9 @@
 html { scroll-behavior: smooth; }
 
 :root {
-  --bg:        #09090f;
-  --surface:   #111119;
-  --surface2:  #181826;
+  --bg:        #0d1117;
+  --surface:   #161b25;
+  --surface2:  #1c2333;
   --border:    rgba(255, 255, 255, 0.07);
   --accent:    #00d9ff;
   --accent-dim: rgba(0, 217, 255, 0.12);
@@ -27,6 +27,9 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 217, 255, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(127, 119, 221, 0.05) 0%, transparent 50%);
   color: var(--text);
   font-size: 1rem;
   line-height: 1.7;
@@ -62,7 +65,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 .logo {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1.35rem;
   font-weight: 800;
   color: var(--accent);
@@ -142,7 +145,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 .hero__heading {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: clamp(2.4rem, 5vw, 3.8rem);
   font-weight: 800;
   line-height: 1.1;
@@ -164,6 +167,12 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   font-weight: 500;
   letter-spacing: 0.04em;
   margin-bottom: 1.4rem;
+}
+
+.hero__company {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.95rem;
 }
 
 .hero__desc {
@@ -260,7 +269,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 }
 
 .section__title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--heading);
@@ -326,7 +335,7 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .project__ext:hover { color: var(--accent); transform: translate(2px, -2px); }
 
 .project__title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 1rem;
   font-weight: 700;
   color: var(--heading);
@@ -360,28 +369,57 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 /* =====================
    SKILLS
 ===================== */
+/* =====================
+   SKILLS
+===================== */
+.skills__categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.skills__category {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.skills__category:hover {
+  border-color: rgba(0, 217, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.skills__cat-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
 .skills__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .skills__list li {
-  background: var(--surface);
+  background: var(--surface2);
   border: 1px solid var(--border);
   color: var(--text);
-  font-size: 0.83rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  padding: 7px 18px;
-  border-radius: 8px;
-  transition: background 0.2s, border-color 0.2s, color 0.2s, transform 0.15s;
+  padding: 5px 12px;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
-
 .skills__list li:hover {
   background: var(--accent-dim);
-  border-color: rgba(0, 217, 255, 0.35);
+  border-color: rgba(0, 217, 255, 0.3);
   color: var(--accent);
-  transform: translateY(-2px);
 }
 
 /* =====================
@@ -425,6 +463,169 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
   transition: transform 0.2s, color 0.2s;
 }
 .contact__btn:hover .contact__btn-arrow { transform: translateX(4px); color: var(--accent); }
+
+/* =====================
+   EXPERIENCE TIMELINE
+===================== */
+.timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
+}
+
+.timeline__item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 3rem;
+}
+.timeline__item:last-child { padding-bottom: 0; }
+
+.timeline__dot {
+  position: absolute;
+  left: -0.45rem;
+  top: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.timeline__dot--muted {
+  background: var(--muted);
+  box-shadow: 0 0 0 2px var(--muted);
+}
+
+.timeline__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 0.4rem;
+}
+.timeline__period {
+  font-size: 0.78rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.timeline__location {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+.timeline__company {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--heading);
+  margin-bottom: 0.15rem;
+}
+.timeline__role {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 0.9rem;
+}
+.timeline__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+.timeline__bullets li {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.timeline__bullets li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  opacity: 0.6;
+}
+.timeline__bullets strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* =====================
+   EDUCATION
+===================== */
+.edu__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.edu__card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.edu__card:hover {
+  border-color: rgba(0, 217, 255, 0.25);
+  transform: translateY(-3px);
+}
+.edu__card--featured {
+  border-color: rgba(0, 217, 255, 0.2);
+  background: var(--surface2);
+}
+
+.edu__year {
+  font-size: 0.75rem;
+  color: var(--accent);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.5rem;
+}
+.edu__institution {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--heading);
+  line-height: 1.3;
+  margin-bottom: 0.3rem;
+}
+.edu__degree {
+  font-size: 0.83rem;
+  color: var(--muted);
+  margin-bottom: 0.8rem;
+}
+.edu__badge {
+  display: inline-block;
+  background: var(--accent-dim);
+  border: 1px solid rgba(0, 217, 255, 0.18);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+.edu__badge--muted {
+  background: rgba(122, 132, 160, 0.1);
+  border-color: rgba(122, 132, 160, 0.2);
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .edu__grid { grid-template-columns: 1fr; }
+  .timeline__meta { flex-direction: column; align-items: flex-start; }
+}
 
 /* =====================
    FOOTER

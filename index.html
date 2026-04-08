@@ -6,7 +6,7 @@
   <meta name="description" content="Abhinav Barman — Senior Product Analyst building thoughtful digital products">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Abhinav Barman</title>
 </head>
@@ -16,6 +16,8 @@
     <a href="#top" class="logo">AB.</a>
     <nav class="nav">
       <ul class="nav__list">
+        <li><a class="nav__link" href="#experience">Experience</a></li>
+        <li><a class="nav__link" href="#education">Education</a></li>
         <li><a class="nav__link" href="#projects">Projects</a></li>
         <li><a class="nav__link" href="#skills">Skills</a></li>
         <li><a class="nav__link" href="#contact">Contact</a></li>
@@ -36,12 +38,12 @@
             <span class="hero__hi">Hi <span class="wave">👋</span></span>
             <span class="hero__name">I'm <span id="typed-text"></span><span class="cursor">_</span></span>
           </h1>
-          <p class="hero__role">Senior Product Analyst</p>
+          <p class="hero__role">Senior Product Analyst <span class="hero__company">@ UnifyApps</span></p>
           <p class="hero__desc">
-            I turn ambiguous problems into clear product decisions — owning features end-to-end, 
-            from discovery and wireframing through to data analysis and shipping. 
-            My work sits at the intersection of <em>product strategy, analytics and low-code automation</em>, 
-            with hands-on experience in SQL, Python, Figma and AI-powered tooling.
+            I turn ambiguous problems into clear product decisions, owning features end-to-end,
+            from discovery and design to data and iteration. I operate at the intersection of
+            <em>product strategy, analytics, and automation</em>, building efficient systems with
+            AI agents and low-code tools, breaking down complex problems into simple, scalable solutions.
           </p>
           <div class="hero__actions">
             <a href="https://drive.google.com/file/d/1XK5EK98Hvx9zY1VTc_D7i2MUNWFfBtEf/view" class="btn btn--primary" target="_blank" rel="noopener">Resume</a>
@@ -57,7 +59,84 @@
       </div>
     </section>
 
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="section__header">
+        <span class="section__eyebrow">Career</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline__item">
+          <div class="timeline__dot"></div>
+          <div class="timeline__content">
+            <div class="timeline__meta">
+              <span class="timeline__period">Aug 2025 – Present</span>
+              <span class="timeline__location">Gurugram, India</span>
+            </div>
+            <h3 class="timeline__company">UnifyApps</h3>
+            <p class="timeline__role">Senior Product Analyst</p>
+            <ul class="timeline__bullets">
+              <li>Drove 0→1 launch of a <strong>CMS payout platform</strong> for a leading payments bank, automating SFTP-based ingestion, validation, settlement, and reconciliation workflows — reducing processing time by <strong>96%</strong> (11 hrs → 26 mins) and improving operational efficiency by <strong>60%</strong>.</li>
+              <li>Leading parallel development of <strong>Settlement & Insurance platforms</strong>, designing rule-based reconciliation, GL mapping, and IFT generation across multi-source data for scalable, audit-compliant financial operations.</li>
+              <li>Built key features for an <strong>agentic AI assistant</strong> for a Dubai government platform — real-time multilingual responses, voice-enabled interface, and dynamic knowledge updates; showcased at <strong>GITEX 2025</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline__item">
+          <div class="timeline__dot timeline__dot--muted"></div>
+          <div class="timeline__content">
+            <div class="timeline__meta">
+              <span class="timeline__period">May 2024 – Jul 2024</span>
+              <span class="timeline__location">Mumbai, India</span>
+            </div>
+            <h3 class="timeline__company">L&T Precision Engineering and Systems</h3>
+            <p class="timeline__role">Data Analyst Intern</p>
+            <ul class="timeline__bullets">
+              <li>Streamlined Active Directory and Antivirus data management for <strong>20,000+ devices</strong> by automating integration and analysis via a Tkinter GUI — reducing manual effort by <strong>30%</strong> and processing time by <strong>40%</strong>.</li>
+              <li>Built <strong>Power BI dashboards</strong> to visualise application distribution across 10+ organisational locations, enabling strategic resource allocation and reducing reporting time by <strong>25%</strong>.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="section__header">
+        <span class="section__eyebrow">Academic</span>
+        <h2 class="section__title">Education</h2>
+      </div>
+      <div class="edu__grid">
+
+        <div class="edu__card edu__card--featured">
+          <div class="edu__year">Nov 2021 – May 2025</div>
+          <h3 class="edu__institution">Indian Institute of Technology, Ropar</h3>
+          <p class="edu__degree">B.Tech in Electrical Engineering</p>
+          <span class="edu__badge">CGPA: 7.14</span>
+        </div>
+
+        <div class="edu__card">
+          <div class="edu__year">2020</div>
+          <h3 class="edu__institution">Ryan International School, Sanpada</h3>
+          <p class="edu__degree">Class XII — CBSE</p>
+          <span class="edu__badge edu__badge--muted">89.8%</span>
+        </div>
+
+        <div class="edu__card">
+          <div class="edu__year">2018</div>
+          <h3 class="edu__institution">Kendriya Vidyalaya, Ambernath</h3>
+          <p class="edu__degree">Class X — CBSE</p>
+          <span class="edu__badge edu__badge--muted">94.4%</span>
+        </div>
+
+      </div>
+    </section>
+
     <!-- PROJECTS -->
+
     <section id="projects" class="section">
       <div class="section__header">
         <span class="section__eyebrow">Work</span>
@@ -157,14 +236,52 @@
         <span class="section__eyebrow">Toolkit</span>
         <h2 class="section__title">Skills</h2>
       </div>
-      <ul class="skills__list">
-        <li>Python</li><li>SQL</li><li>MS Excel</li><li>Power BI</li>
-        <li>PostgreSQL</li><li>Tableau</li><li>R</li><li>MySQL</li>
-        <li>Jamovi</li><li>C++</li><li>HTML</li><li>CSS</li>
-        <li>JavaScript</li><li>ReactJS</li><li>Node.js</li><li>Pandas</li>
-        <li>Matplotlib</li><li>TensorFlow</li><li>PyTorch</li><li>Tkinter</li>
-        <li>NumPy</li>
-      </ul>
+      <div class="skills__categories">
+
+        <div class="skills__category">
+          <h3 class="skills__cat-title">Product Management</h3>
+          <ul class="skills__list">
+            <li>Product Discovery & Strategy</li>
+            <li>Roadmapping</li>
+            <li>PRD Writing</li>
+            <li>User Research</li>
+            <li>Wireframing</li>
+          </ul>
+        </div>
+
+        <div class="skills__category">
+          <h3 class="skills__cat-title">Analytics & Experimentation</h3>
+          <ul class="skills__list">
+            <li>Metric Definition</li>
+            <li>Funnel Analysis</li>
+            <li>A/B Testing</li>
+            <li>Dashboarding</li>
+          </ul>
+        </div>
+
+        <div class="skills__category">
+          <h3 class="skills__cat-title">Execution & Collaboration</h3>
+          <ul class="skills__list">
+            <li>Business Analysis</li>
+            <li>Stakeholder Communication</li>
+            <li>Cross-Functional Collaboration</li>
+          </ul>
+        </div>
+
+        <div class="skills__category">
+          <h3 class="skills__cat-title">Data & Tools</h3>
+          <ul class="skills__list">
+            <li>SQL</li>
+            <li>Python (Pandas, NumPy)</li>
+            <li>Microsoft Excel</li>
+            <li>Power BI</li>
+            <li>PostgreSQL</li>
+            <li>Figma</li>
+            <li>Groovy</li>
+          </ul>
+        </div>
+
+      </div>
     </section>
 
     <!-- CONTACT -->
