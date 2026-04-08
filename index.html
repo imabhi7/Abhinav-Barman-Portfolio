@@ -3,300 +3,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio">
+  <meta name="description" content="Abhinav Barman — Senior Product Analyst building thoughtful digital products">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;1,400&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    
-    @keyframes jiggle-animation {
-      0% {
-        transform: rotate(0);
-      }
-      25% {
-        transform: rotate(-10deg);
-      }
-      75% {
-        transform: rotate(10deg);
-      }
-      100% {
-        transform: rotate(0);
-      }
-    }
-
-    .about {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .about__greeting {
-      display: inline-block;
-      animation: jiggle-animation 2s infinite ease-in-out;
-    }
-
-    .about__name {
-      font-weight: bold;
-    }
-    
-    .about__text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    .about__desc {
-      text-align: center;
-    }
-
-    .profile-picture {
-      margin-top: 25px;
-      width: 275px;
-      height: 275px;
-      border: 2px solid #ffffff;
-      border-radius: 50%;
-      overflow: hidden;
-    }
-    
-    .profile-picture img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    
-    .responsive-image {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
-    
-    .about__underscore {
-    display: inline-block;
-    animation: blink-animation 1s infinite;
-    }
-
-    @keyframes blink-animation {
-      0% {
-        opacity: 0;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-
-    .contact__grid {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .contact__item {
-      flex: 1;
-      text-align: center;
-    }
-
-  </style>
-  <title>Abhinav Barman's Portfolio</title>
+  <title>Abhinav Barman</title>
 </head>
+<body id="top">
 
-<body class="dark" id="top">
-  
-  <header class="header center">
-    
-    <h3>
-      <a href="https://imabhi7.github.io/Abhinav-Barman-Portfolio/" class="link">AB.</a>
-    </h3>
-    
-    <nav class="nav center">
-      <ul class="nav__list center">
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#projects">Projects</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#skills">Skills</a>
-        </li>
-        <li class="nav__list-item">
-          <a class="link link--nav" href="#contact">Contact</a>
-        </li>
+  <header class="header">
+    <a href="#top" class="logo">AB.</a>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a class="nav__link" href="#projects">Projects</a></li>
+        <li><a class="nav__link" href="#skills">Skills</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </nav>
+  </header>
 
-  </header>    
-    <div class="about center">
-      <h1>Hi<span class="about__greeting">👋</span>, <span class="about__name" id="typed-text"></span><span class="about__underscore">_</span></h1>
-      <div class="profile-picture">
-        <img src="img/AB.jpg" alt="Abhinav Barman" class="responsive-image">
-      </div>
-      <div class="about__text">
-        <div class="about__desc">
-          <p>A product enthusiast focused on building thoughtful, user-centric digital experiences.
-I currently work as a Senior Product Analyst, involved in 0→1 product development, owning features end-to-end and solving ambiguous problems, while driving efficiency through data, automation, leveraging AI agents and low-code development.
-My skill set spans product discovery and strategy, roadmapping, PRD writing, user research, wireframing, metric definition, funnel analysis, A/B testing, backed by hands-on experience with SQL, Python, Groovy and Figma.
-I enjoy breaking down complex problems, collaborating closely with cross-functional teams and learning in high-growth environments.
-Always up for conversations around product, ideas and building things!</p>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__inner">
+        <div class="hero__text">
+          <h1 class="hero__heading">
+            <span class="hero__hi">Hi <span class="wave">👋</span></span>
+            <span class="hero__name">I'm <span id="typed-text"></span><span class="cursor">_</span></span>
+          </h1>
+          <p class="hero__role">Senior Product Analyst</p>
+          <p class="hero__desc">
+            I turn ambiguous problems into clear product decisions — owning features end-to-end, 
+            from discovery and wireframing through to data analysis and shipping. 
+            My work sits at the intersection of <em>product strategy, analytics and low-code automation</em>, 
+            with hands-on experience in SQL, Python, Figma and AI-powered tooling.
+          </p>
+          <div class="hero__actions">
+            <a href="https://drive.google.com/file/d/1XK5EK98Hvx9zY1VTc_D7i2MUNWFfBtEf/view" class="btn btn--primary" target="_blank" rel="noopener">Resume</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero__photo-wrap">
+          <div class="hero__photo">
+            <img src="img/AB.jpg" alt="Abhinav Barman" />
+          </div>
+          <div class="hero__photo-deco" aria-hidden="true"></div>
         </div>
       </div>
-      <div class="about__contact center">
-        <a href="https://drive.google.com/file/d/1XK5EK98Hvx9zY1VTc_D7i2MUNWFfBtEf/view">
-          <span class="btn btn--outline">Resume</span>
-        </a>
-      </div>
-    </div>
-    
-    <script>
-      const textToType = "I'm Abhinav Barman";
-      const delay = 100;
-    
-      function typeWriter(text, i = 0) {
-        if (i < text.length) {
-          document.getElementById("typed-text").textContent += text.charAt(i);
-          setTimeout(() => typeWriter(text, i + 1), delay);
-        } else {
-          startBlinkingUnderscore();
-        }
-      }
-    
-      function startBlinkingUnderscore() {
-        const underscore = document.querySelector('.about__underscore');
-        underscore.style.animation = "blink-animation 1s infinite";
-      }
-    
-      typeWriter(textToType);
-    </script>
+    </section>
 
-    <section id="projects" class="section projects">
-      <h2 class="section__title">Projects</h2>
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="section__header">
+        <span class="section__eyebrow">Work</span>
+        <h2 class="section__title">Projects</h2>
+      </div>
       <div class="projects__grid">
-        
-        <div class="project">
-          <a href="https://github.com/imabhi7/Spotify-Analysis-with-SQL-and-Query-Optimization" aria-label="source code" class="link link--icon"><h3>Spotify Analysis with SQL and Query Optimization</h3></a>
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <p class="project__description">An analysis of a Spotify dataset using SQL, focusing on data normalization, complex queries, and query optimization to derive insights and handle large datasets efficiently.</p>
-          <ul class="project__stack">
-            <li class="project__stack-item">PostgreSQL</li>
-            <li class="project__stack-item">pgAdmin</li>
-          </ul>
-        </div>
 
-        <div class="project">
-          <a href="https://github.com/imabhi7/Supply-Chain-Optimization-through-Data-Analysis" aria-label="source code" class="link link--icon"><h3>Supply Chain Optimization through Data Analysis</h3></a>
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <p class="project__description">This project focuses on optimizing supply chain operations through data-driven analysis. It provides insights into product trends, revenue growth, and storage optimization, helping companies scale efficiently. 
-            The project includes data analysis, visualizations, and recommendations to enhance supply chain strategies based on customer preferences.</p>
+        <article class="project">
+          <div class="project__top">
+            <div class="project__icon">⬡</div>
+            <a href="https://github.com/imabhi7/Spotify-Analysis-with-SQL-and-Query-Optimization" target="_blank" rel="noopener" class="project__ext" aria-label="View on GitHub">↗</a>
+          </div>
+          <h3 class="project__title">Spotify Analysis & Query Optimization</h3>
+          <p class="project__desc">Deep-dives into a Spotify dataset using SQL — data normalisation, complex queries, and optimisation techniques to surface insights at scale.</p>
           <ul class="project__stack">
-            <li class="project__stack-item">Python</li>
-            <li class="project__stack-item">Jupyter Notebook</li>
+            <li>PostgreSQL</li>
+            <li>pgAdmin</li>
           </ul>
-        </div>
-        
-        <div class="project">
-          <a href="https://github.com/imabhi7/Local-Certificate-Authority-Service" aria-label="source code" class="link link--icon"><h3>Local Certificate Authority Service</h3></a>
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <p class="project__description">Open-source web app for managing CSRs and issuing X.509 certificates in a small PKI. Built with Node.js, React, and PostgreSQL, it offers user/admin dashboards, secure authentication, and email notifications. Perfect for lightweight PKI setups.</p>
-          <ul class="project__stack">
-            <li class="project__stack-item">ReactJS</li>
-            <li class="project__stack-item">Node.js</li>
-            <li class="project__stack-item">PostgreSQL</li>
-          </ul>
-        </div>
-        
-        <div class="project">
-          <a href="https://github.com/imabhi7/SNN-vs.-CNN-A-Performance-Comparison-on-Image-Recognition-Tasks" aria-label="source code" class="link link--icon"><h3>SNN vs. CNN: A Comparative Study</h3></a>
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <p class="project__description">Compared the performance of Spiking Neural Networks (SNNs) and Convolutional Neural Networks (CNNs) on image recognition tasks. It includes implementations, datasets, and experiment results for evaluation.</p>
-          <ul class="project__stack">
-            <li class="project__stack-item">Python</li>
-            <li class="project__stack-item">TensorFlow</li>
-            <li class="project__stack-item">PyTorch</li>
-            <li class="project__stack-item">NumPy</li>
-          </ul>
-        </div>
+        </article>
 
-        <div class="project">
-          <a href="https://github.com/imabhi7/Image-Enhancement" aria-label="source code" class="link link--icon"><h3>Image Enhancement</h3></a>
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <p class="project__description">Developed a project to enhance blurred images using advanced image processing techniques for improved clarity, sharpness,
-            brightness and contrast.</p>
+        <article class="project">
+          <div class="project__top">
+            <div class="project__icon">◈</div>
+            <a href="https://github.com/imabhi7/Supply-Chain-Optimization-through-Data-Analysis" target="_blank" rel="noopener" class="project__ext" aria-label="View on GitHub">↗</a>
+          </div>
+          <h3 class="project__title">Supply Chain Optimisation</h3>
+          <p class="project__desc">Data-driven analysis uncovering product trends, revenue drivers, and storage inefficiencies — with actionable recommendations to help companies scale.</p>
           <ul class="project__stack">
-            <li class="project__stack-item">Python</li>
-            <li class="project__stack-item">OpenCV</li>
-            <li class="project__stack-item">NumPy</li>
-            <li class="project__stack-item">Matplotlib</li>
+            <li>Python</li>
+            <li>Jupyter Notebook</li>
           </ul>
-        </div>
+        </article>
 
-        <div class="project">
-          <a href="https://github.com/imabhi7/Mumbai-Local-Journey-Planner" aria-label="source code" class="link link--icon"><h3>Mumbai Local Journey Planner</h3></a>
-            <i aria-hidden="true" class="fab fa-github"></i>
-          </a>
-          <p class="project__description">Built a project using Dijkstra’s algorithm to determine the minimum number of railway stations required for a journey in 
-            Mumbai local. Developed a website that takes the starting and destination station numbers as input and calculates the shortest route with the fewest stations efficiently.</p>
+        <article class="project">
+          <div class="project__top">
+            <div class="project__icon">◻</div>
+            <a href="https://github.com/imabhi7/Local-Certificate-Authority-Service" target="_blank" rel="noopener" class="project__ext" aria-label="View on GitHub">↗</a>
+          </div>
+          <h3 class="project__title">Local Certificate Authority Service</h3>
+          <p class="project__desc">Open-source web app for managing CSRs and issuing X.509 certificates in a lightweight PKI — with user/admin dashboards, secure auth, and email notifications.</p>
           <ul class="project__stack">
-            <li class="project__stack-item">ReactJS</li>
-            <li class="project__stack-item">C++</li>
+            <li>ReactJS</li>
+            <li>Node.js</li>
+            <li>PostgreSQL</li>
           </ul>
-        </div>
+        </article>
+
+        <article class="project">
+          <div class="project__top">
+            <div class="project__icon">⬡</div>
+            <a href="https://github.com/imabhi7/SNN-vs.-CNN-A-Performance-Comparison-on-Image-Recognition-Tasks" target="_blank" rel="noopener" class="project__ext" aria-label="View on GitHub">↗</a>
+          </div>
+          <h3 class="project__title">SNN vs. CNN: A Comparative Study</h3>
+          <p class="project__desc">Side-by-side performance comparison of Spiking Neural Networks and CNNs across image recognition benchmarks — implementations, datasets, and full results included.</p>
+          <ul class="project__stack">
+            <li>Python</li>
+            <li>TensorFlow</li>
+            <li>PyTorch</li>
+            <li>NumPy</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project__top">
+            <div class="project__icon">◈</div>
+            <a href="https://github.com/imabhi7/Image-Enhancement" target="_blank" rel="noopener" class="project__ext" aria-label="View on GitHub">↗</a>
+          </div>
+          <h3 class="project__title">Image Enhancement</h3>
+          <p class="project__desc">Restores blurred images using advanced processing techniques — improving clarity, sharpness, brightness and contrast with measurable results.</p>
+          <ul class="project__stack">
+            <li>Python</li>
+            <li>OpenCV</li>
+            <li>NumPy</li>
+            <li>Matplotlib</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="project__top">
+            <div class="project__icon">◻</div>
+            <a href="https://github.com/imabhi7/Mumbai-Local-Journey-Planner" target="_blank" rel="noopener" class="project__ext" aria-label="View on GitHub">↗</a>
+          </div>
+          <h3 class="project__title">Mumbai Local Journey Planner</h3>
+          <p class="project__desc">Dijkstra's algorithm powering a web app that finds the shortest route — fewest stations — between any two stops on Mumbai's vast local rail network.</p>
+          <ul class="project__stack">
+            <li>ReactJS</li>
+            <li>C++</li>
+          </ul>
+        </article>
 
       </div>
     </section>
 
-    <section class="section skills" id="skills">
-      <h2 class="section__title">Skills</h2>
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="section__header">
+        <span class="section__eyebrow">Toolkit</span>
+        <h2 class="section__title">Skills</h2>
+      </div>
       <ul class="skills__list">
-        <li class="skills__list-item btn btn--plain">Python</li>
-        <li class="skills__list-item btn btn--plain">SQL</li>
-        <li class="skills__list-item btn btn--plain">MS Excel</li>
-        <li class="skills__list-item btn btn--plain">Power BI</li>
-        <li class="skills__list-item btn btn--plain">PostgreSQL</li>
-        <li class="skills__list-item btn btn--plain">Tableau</li>
-        <li class="skills__list-item btn btn--plain">R</li>
-        <li class="skills__list-item btn btn--plain">MySQL</li>
-        <li class="skills__list-item btn btn--plain">Jamovi</li>
-        <li class="skills__list-item btn btn--plain">C++</li>
-        <li class="skills__list-item btn btn--plain">HTML</li>
-        <li class="skills__list-item btn btn--plain">CSS</li>
-        <li class="skills__list-item btn btn--plain">JavaScript</li>
-        <li class="skills__list-item btn btn--plain">ReactJS</li>
-        <li class="skills__list-item btn btn--plain">Node.js</li>
-        <li class="skills__list-item btn btn--plain">Pandas</li>
-        <li class="skills__list-item btn btn--plain">Matplotlib</li>
-        <li class="skills__list-item btn btn--plain">TensorFlow</li>
-        <li class="skills__list-item btn btn--plain">PyTorch</li>
-        <li class="skills__list-item btn btn--plain">Tkinter</li>
-        <li class="skills__list-item btn btn--plain">NumPy</li>
+        <li>Python</li><li>SQL</li><li>MS Excel</li><li>Power BI</li>
+        <li>PostgreSQL</li><li>Tableau</li><li>R</li><li>MySQL</li>
+        <li>Jamovi</li><li>C++</li><li>HTML</li><li>CSS</li>
+        <li>JavaScript</li><li>ReactJS</li><li>Node.js</li><li>Pandas</li>
+        <li>Matplotlib</li><li>TensorFlow</li><li>PyTorch</li><li>Tkinter</li>
+        <li>NumPy</li>
       </ul>
     </section>
 
-    <section class="section contact center" id="contact">
-      <h2 class="section__title">Contact</h2>
-      <div class="contact__grid">
-        <a href="mailto:abhinavbarman2002@gmail.com" class="contact__item">
-          <span class="btn btn--outline">Email</span>
+    <!-- CONTACT -->
+    <section id="contact" class="section section--contact">
+      <div class="section__header">
+        <span class="section__eyebrow">Reach out</span>
+        <h2 class="section__title">Let's talk</h2>
+      </div>
+      <p class="contact__desc">Always up for conversations around product, ideas and building things.</p>
+      <div class="contact__links">
+        <a href="mailto:abhinavbarman2002@gmail.com" class="contact__btn">
+          <span class="contact__btn-label">Email</span>
+          <span class="contact__btn-arrow">→</span>
         </a>
-        <a href="https://www.linkedin.com/in/abhinav-barman/" class="contact__item">
-          <span class="btn btn--outline">LinkedIn</span>
+        <a href="https://www.linkedin.com/in/abhinav-barman/" target="_blank" rel="noopener" class="contact__btn">
+          <span class="contact__btn-label">LinkedIn</span>
+          <span class="contact__btn-arrow">→</span>
         </a>
-        <a href="https://github.com/imabhi7" class="contact__item">
-          <span class="btn btn--outline">GitHub</span>
+        <a href="https://github.com/imabhi7" target="_blank" rel="noopener" class="contact__btn">
+          <span class="contact__btn-label">GitHub</span>
+          <span class="contact__btn-arrow">→</span>
         </a>
       </div>
     </section>
 
-  </br>
-  </br>
-  </br>
-  </br>
   </main>
+
+  <footer class="footer">
+    <p>Abhinav Barman &copy; <span id="year"></span></p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Typewriter
+    const text = "Abhinav Barman";
+    let i = 0;
+    const el = document.getElementById("typed-text");
+    function type() {
+      if (i < text.length) {
+        el.textContent += text[i++];
+        setTimeout(type, 90);
+      }
+    }
+    setTimeout(type, 600);
+
+    // Year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Hamburger
+    const ham = document.getElementById("hamburger");
+    const navList = document.querySelector(".nav__list");
+    ham.addEventListener("click", () => {
+      ham.classList.toggle("open");
+      navList.classList.toggle("open");
+    });
+    document.querySelectorAll(".nav__link").forEach(l =>
+      l.addEventListener("click", () => {
+        ham.classList.remove("open");
+        navList.classList.remove("open");
+      })
+    );
+  </script>
 </body>
 </html>
