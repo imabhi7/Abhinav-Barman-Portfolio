@@ -370,11 +370,13 @@
     ham.addEventListener("click", () => {
       ham.classList.toggle("open");
       navList.classList.toggle("open");
+      document.body.classList.toggle("nav-open");
     });
     document.querySelectorAll(".nav__link").forEach(l =>
       l.addEventListener("click", () => {
         ham.classList.remove("open");
         navList.classList.remove("open");
+        document.body.classList.remove("nav-open");
       })
     );
   </script>
